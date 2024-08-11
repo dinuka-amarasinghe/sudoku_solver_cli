@@ -48,4 +48,10 @@ public class Main {
         }
         return false;
     }
+
+    private static boolean isValidPlacement(int[][] board, int number, int row, int column) {
+        return !isNumberInRow(board, number, row) &&
+                !isNumberInColumn(board, number, column) &&
+                !isNumberInBox(board, number, row, column);
+    }
 }
